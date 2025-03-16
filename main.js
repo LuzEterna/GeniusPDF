@@ -1,7 +1,18 @@
-var preload_state = require("./preload.json")
+const fs = require('fs')
+const Api = require("./api")
 
+!(async()=>{
+    var preload_state = await Api.GetGeniusBody("link") //example data for test
+    var document = fs.readFileSync('style.html', 'utf-8');
 
-var document = `<html><body>${jsonParser(preload_state.songPage.lyricsData.body)}</body></html>`
+    annotions_ids = preload_state.songPage.lyricsData.referents
+
+    document=document.replaceAll("%%-header-%%", `${preload_state.songPage.trackingData.Title} - ${preload_state.songPage.trackingData['Primary Artist']}`)
+    document=document.replace("%%-root-%%", jsonParser(preload_state.songPage.lyricsData.body))
+    
+    //console.log(await Api.GetAnnotion(17975864))  
+    console.log(document)  
+})()
 
 function jsonParser(json) {
     var doc = ``;
@@ -14,7 +25,8 @@ function jsonParser(json) {
         if(json.tag == "a"){ //annotations 
             doc += `<span data-annotations-id="${json.data.id}">${jsonParser(json.children)}</span>`
             
-        } else 
+        } else { 
+             doc += `<${json.tag}>`;
         if(typeof json.children == 'string') {
             doc += json.children;
         } else {  
@@ -22,11 +34,10 @@ function jsonParser(json) {
                 doc += jsonParser(json.children)
         }
         
-    if(json.tag != "br" || json.tag != "a")
+    if(json.tag != "br" && json.tag != "a")
         doc += `</${json.tag}>`;
     }
+}
     return doc;
 }
 
-
-console.log(document)
