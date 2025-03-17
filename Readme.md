@@ -19,10 +19,10 @@ var preload_state = await Api.GetGeniusBody("https://genius.com/Sanser-susamam-l
 
 # Photos
 
-![](C:\Users\Luz\Desktop\GeniusPDF\assets\1.png)
+![](https://github.com/LuzEterna/GeniusPDF/blob/master/assets/1.png)
 
-![](C:\Users\Luz\Desktop\GeniusPDF\assets\2.png)
+![](https://github.com/LuzEterna/GeniusPDF/blob/master/assets/2.png)
 
-![](C:\Users\Luz\Desktop\GeniusPDF\assets\3.png)
+![](https://github.com/LuzEterna/GeniusPDF/blob/master/assets/3.png)
 
 *- The html page is designed using chatgpt.*
