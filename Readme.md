@@ -4,7 +4,6 @@
 - [ ] Replacing the Jsonparser function with the JSDOM framework.
 - [ ] Increasing the readability of the code
 
----
 
 # Usage
 
@@ -17,8 +16,6 @@ Before starting, you must replace the link in -- with your own song.
 ```js
 var preload_state = await Api.GetGeniusBody("https://genius.com/Sanser-susamam-lyrics")
 ```
-
-
 
 ---
 
