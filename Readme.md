@@ -4,7 +4,7 @@
 - [ ] Replacing the Jsonparser function with the JSDOM framework.
 - [ ] Increasing the readability of the code
 
-
+---
 
 # Usage
 
@@ -19,6 +19,10 @@ var preload_state = await Api.GetGeniusBody("https://genius.com/Sanser-susamam-l
 ```
 
 
+
+---
+
+*The html page is designed using chatgpt.*
 
 
 
