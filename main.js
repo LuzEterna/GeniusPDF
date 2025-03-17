@@ -4,7 +4,7 @@ const Api = require("./api")
 
     !(async () => {
         
-        var preload_state = await Api.GetGeniusBody("https://genius.com/Sanser-susamam-lyrics") //example data for test
+        var preload_state = await Api.GetGeniusBody("https://genius.com/Sehinsah-karma-lyrics") //example data for test
         var document = await fs.readFileSync('style.html', 'utf-8');
 
         document = document.replace("%%-root-%%", jsonParser(preload_state.songPage.lyricsData.body))
