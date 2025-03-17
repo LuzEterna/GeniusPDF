@@ -1,0 +1,14 @@
+{
+  "name": "geniuspdf",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "author": "Luz",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "puppeteer": "^24.4.0"
+  }
+}

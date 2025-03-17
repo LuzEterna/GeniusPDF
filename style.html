@@ -3,70 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>%%-header-%%</title>
+    <title>Genius</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">
-        <h1>%%-header-%%</h1>
+        <h1>Genius</h1>
     </div>
 
     <div class="content">
-        <div class="album-cover">
-            <!--<img src="album_kapagi.jpg" alt="Albüm Kapağı">-->
-            
+        <div class="album-container">
+            <div class="album-cover">
+                <img src="%%-image-%%">
+            </div>
+            <div class="album-info">
+                <h2>%%-song-name-%%</h2>
+                <!--<p>%%-album-name-%%</p>-->
+                <p>%%-artists-%%</p>
+            </div>
         </div>
+        <hr class="divider">
+        
+        %%-root-%%
+        
+        %%-annotations-%%
 
-       %%-root-%%
-    
     </div>
 </body>
 
 <style>
     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-.header {
-    background-color: #d32f2f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 2rem;
-    font-family: 'Arial', sans-serif;
-}
+    .header {
+        background-color: #ffcc00;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 2rem;
+        font-family: 'Arial', sans-serif;
+    }
 
-.content {
-    background-color: white;
-    color: #333;
-    padding: 40px;
-    font-family: 'Programme', 'Arial', sans-serif;
-    text-align: center;
-}
+    .content {
+        background-color: white;
+        color: #333;
+        padding: 40px;
+        font-family: 'Programme', 'Arial', sans-serif;
+        text-align: center;
+    }
 
-.album-cover img {
-    max-width: 300px;
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-}
+    .album-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 30px;
+    }
 
-root {
-    margin-top: 30px;
-    font: 100 1.125rem / 1.5 Programme, Arial, sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-}
+    .album-cover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        background-color: #f0f0f0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-left: 20px;
+    }
 
-root h2 {
-    margin-bottom: 20px;
-}
+    .album-cover img {
+        height: 400px;
+        border-radius: 8px;
+    }
+
+    .album-info {
+        text-align: left;
+        font-size: 1.2rem;
+        margin-left: 20px;
+    }
+
+    .album-info h2 {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .album-info p {
+        font-size: 1.2rem;
+        color: #555;
+    }
+
+    .divider {
+        border: 1px solid #ddd;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    root {
+        margin-top: 30px;
+        font: 100 1.125rem / 1.5 Programme, Arial, sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+
+    a {
+        transition: color 0.1s;
+    }
+
+    a:nth-child(5n + 1) { color: #d63f3f; }   
+    a:nth-child(5n + 2) { color: #3f41d6; }   
+    a:nth-child(5n + 3) { color: #79d63f; }   
+    a:nth-child(5n + 4) { color: #d63f76; }   
+    a:nth-child(5n) { color: #d6c43f; }  
+
+    a:hover {
+        filter: brightness(80%);
+    }
+
 </style>
+<style>
+.quote-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote-container blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .quote-container p {
+            font-size: 1.125rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .content-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-container p {
+            font-size: 1.125rem;
+            color: #555;
+            line-height: 1.6;
+        }
+</style>
+
 </html>
